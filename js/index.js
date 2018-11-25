@@ -3,14 +3,9 @@ $(document).ready(function() {
   var docw = $(window).width();
 
   var menuh = $(".menu").height();
-  var menuah = $(".menualt").height();
 
   $(".menu").css({
     'top':'calc(50% - ' + (menuh/2) + 'px)'
-  });
-
-  $(".menualt").css({
-    'top':'calc(50% - ' + (menuah/2) + 'px)'
   });
 
   $("#about").click(function(event) {
@@ -24,10 +19,6 @@ $(document).ready(function() {
   });
 
   $("#contact").click(function(event) {
-    menuah = $(".menualt").height();
-    $(".menualt").css({
-      'top':'calc(50% - ' + (menuah/2) + 'px)'
-    });
     $(".hobbies, .about, .work, .main").hide();
     $(".contact").show();
   });
@@ -59,6 +50,40 @@ $(document).ready(function() {
   $(".popup img").click(function(event) {
     $(".popup").hide();
   });
+
+  $("#twitter").hover(function() {
+    $(".linkimg").attr('src', 'img/twitter.png');
+  });
+
+  $("#steam").hover(function() {
+    $(".linkimg").attr('src', 'img/steam.png');
+  });
+
+  $("#discord").hover(function() {
+    $(".linkimg").attr('src', 'img/discord.png');
+  });
+
+  $("#tg").hover(function() {
+    $(".linkimg").attr('src', 'img/tg.png');
+  });
+
+  $("#cc").hover(function() {
+    $(".linkimg").attr('src', 'img/cc.png');
+  });
+
+  $("#email").hover(function() {
+    $(".linkimg").attr('src', 'img/email.png');
+  });
+
+  $(".popup button").hover(function() {
+    $(".popup input").addClass('shakeit');
+  }, function() {
+    $(".popup input").removeClass('shakeit');
+  });
+
+  $(".popup button").click(function() {
+    $(".toast").show(0).delay(1500).hide(0);
+  });
 });
 
 function copythis()
@@ -68,5 +93,4 @@ function copythis()
     copyText.select();
     document.execCommand("copy");
     $("input").prop('disabled', true);
-
 }
