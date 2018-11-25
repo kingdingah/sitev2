@@ -1,0 +1,189 @@
+/* index css init*/
+
+html, body
+{
+  min-height: 100%;
+  height: 100%;
+  background-color: #000 !important;
+}
+
+*
+{
+  margin: 0 auto;
+  padding: 0 !important;
+  max-width: 100% !important;
+}
+
+/* Fonts */
+
+@font-face
+{
+    font-family: smalle;
+    src: url('../fonts/smalle.ttf');
+}
+
+@font-face
+{
+    font-family: gothic;
+    src: url('../fonts/gothic.ttf');
+}
+
+.main
+{
+  width: 100%;
+  height: 100%;
+  position: relative;
+}
+
+.menu, .menualt
+{
+  width: 320px;
+  position: absolute;
+  left: calc(50% - 160px);
+}
+
+.menu a, .menualt a
+{
+  color: white !important;
+  font-size: 22px;
+  text-align: center;
+  padding: 4px 0 !important;
+  font-family: smalle;
+  width: 100%;
+  letter-spacing: 2px;
+  display: block;
+  transition: 0.2s ease;
+  -webkit-transition: 0.2s ease;
+}
+
+@-webkit-keyframes spaceboots {
+	0% { -webkit-transform: translate(2px, 1px) rotate(0deg); }
+	10% { -webkit-transform: translate(-1px, -2px) rotate(-1deg); }
+	20% { -webkit-transform: translate(-1px, 0px) rotate(1deg); }
+	30% { -webkit-transform: translate(0px, 2px) rotate(0deg); }
+	40% { -webkit-transform: translate(1px, -1px) rotate(1deg); }
+	50% { -webkit-transform: translate(-1px, 2px) rotate(-1deg); }
+	60% { -webkit-transform: translate(-1px, 1px) rotate(0deg); }
+	70% { -webkit-transform: translate(2px, 1px) rotate(-1deg); }
+	80% { -webkit-transform: translate(-1px, -1px) rotate(1deg); }
+	90% { -webkit-transform: translate(2px, 2px) rotate(0deg); }
+	100% { -webkit-transform: translate(1px, -2px) rotate(-1deg); }
+}
+
+.menu a:hover, .menu a:focus,
+.menualt a:hover, .menualt a:focus,
+.goback:hover, .goback:focus
+{
+  -webkit-animation-name: spaceboots;
+	-webkit-animation-duration: 0.2s;
+	-webkit-transform-origin:50% 50%;
+	-webkit-animation-iteration-count: infinite;
+	-webkit-animation-timing-function: linear;
+  cursor: pointer;
+  text-decoration: none;
+}
+
+.me
+{
+  width: 100%;
+  height: auto;
+  position: relative;
+}
+
+.hobbies, .about, .work, .contact
+{
+  width: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: none;
+}
+
+.title
+{
+  width: 300px;
+  height: auto;
+  margin-left: calc(50% - 150px);
+}
+
+.goback
+{
+  width: 150px;
+  margin-left: calc(50% - 75px);
+  margin-top: -60px;
+  text-align: center;
+  font-size: 16px;
+  color: white !important;
+  font-family: smalle;
+  display: block;
+}
+
+.contact
+{
+  height: 100%;
+}
+
+.popup
+{
+  width: 600px;
+  height: 140px;
+  background: red;
+  position: absolute;
+  left: calc(50% - 300px);
+  top: calc(50% - 100px);
+  z-index: 100;
+  display: none;
+}
+
+.popup input
+{
+  display: block;
+  text-align: center;
+  font-family: smalle;
+  font-size: 40px;
+  width: 100%;
+  height: 100px;
+  line-height: 100px;
+  background-color: red;
+  border: none;
+  outline: none;
+  color: white !important;
+}
+
+.popup button
+{
+  display: block;
+  text-align: center;
+  font-family: smalle;
+  font-size: 20px;
+  width: 100px;
+  height: 30px;
+  background-color: white;
+  border: none;
+  outline: none;
+  line-height: 30px;
+  padding: 3px 0 !important;
+  margin-left: calc(50% - 50px);
+  color: red !important;
+}
+
+.popup button:hover, .popup button:focus,
+.popup button:active
+{
+  cursor: pointer;
+  border: none;
+  outline: none;
+}
+
+.popup img
+{
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  width: 14px;
+  height: 14px;
+}
+.popup img:hover
+{
+  cursor: pointer;
+}
