@@ -37,12 +37,17 @@ $(document).ready(function() {
 
   $("#discord").click(function(event) {
     inputtext = "kingo#1215";
+    $(".popup input").css({'font-size':'40px'})
     $(".popup input").val(inputtext);
     $(".popup").show();
   })
 
   $("#email").click(function(event) {
     inputtext = "kingdingah@outlook.com";
+    if(docw < 900)
+    {
+      $(".popup input").css({'font-size':'24px'})
+    }
     $(".popup input").val(inputtext);
     $(".popup").show();
   })
@@ -73,12 +78,6 @@ $(document).ready(function() {
 
   $("#email").hover(function() {
     $(".linkimg").attr('src', 'img/email.png');
-  });
-
-  $(".popup button").hover(function() {
-    $(".popup input").addClass('shakeit');
-  }, function() {
-    $(".popup input").removeClass('shakeit');
   });
 
   $(".popup button").click(function() {
